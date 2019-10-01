@@ -16,6 +16,7 @@ class MatchDatasorce: Datasource, JSONDecodable {
     var matches: [Match?]
     
     required init(json: JSON) throws {
+        
         var fixtures: [Match?]
         guard let matchArr = json ["matches"].array else {
             throw NSError(domain: URls.mainURL, code: 1, userInfo: [NSLocalizedDescriptionKey:

@@ -4,12 +4,11 @@
 //
 //  Created by Abdallah on 7/8/19.
 //  Copyright © 2019 Abdallah Eldesoky. All rights reserved.
-//
 
 import UIKit
 
 class CustomTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,9 +19,14 @@ class CustomTabBarController: UITabBarController {
         let todayMathesItem = UINavigationController(rootViewController: TodayMatchesTabController())
         todayMathesItem.title = "Matches"
         todayMathesItem.tabBarItem.image = #imageLiteral(resourceName: "liveMatch_icon.png").withRenderingMode(.alwaysOriginal)
-        viewControllers = [standingItem, todayMathesItem]
+        
+        let HighlightItem = UINavigationController(rootViewController: HighlightTVC())
+        HighlightItem.title = "Highlights"
+        HighlightItem.tabBarItem.image = #imageLiteral(resourceName: "highlight_icon").withRenderingMode(.alwaysOriginal)
+        
+        viewControllers = [standingItem, todayMathesItem, HighlightItem]
         
     }
     
-
+    
 }

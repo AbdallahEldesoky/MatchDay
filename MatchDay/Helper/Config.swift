@@ -1,11 +1,3 @@
-//
-//  Config.swift
-//  MatchDay
-//
-//  Created by Abdallah on 7/9/19.
-//  Copyright © 2019 Abdallah Eldesoky. All rights reserved.
-//
-
 import UIKit
 
 
@@ -13,22 +5,24 @@ struct URls {
     
     static let mainURL = "https://api.football-data.org/v2/"
     static let dailyFixtures = "matches"
-    static let competionURL = mainURL + "competitions/"
+    static let competionURL = "competitions/"
     static let PLStandings = competionURL+"PL/standings"
     static let BLStandings = competionURL + "BL1/standings"
     static let SAStandings = competionURL + "SA/standings"
-    static let LALigaStandings = competionURL + ""
-    static let playerDetails = mainURL + "players/"
-    static let teamsURL = mainURL + "teams/"
-    static let matchesDetails = "/matches"
-    static let scorerDetails = "/scorers"
+    static let LALigaStandings = competionURL + "2014/standings"
+    //    static let playerDetails = mainURL + "players/"
+    //    static let teamsURL = mainURL + "teams/"
+    //    static let matchesDetails = "/matches"
+    //    static let scorerDetails = "/scorers"
+    static let highlightBaseURl = "https://free-football-soccer-videos.p.rapidapi.com/"
+    
 }
 
 struct Default {
-
+    
     
     static let image: UIImage = #imageLiteral(resourceName: "defaultImage_icon")
-   
+    
     static let grayBackgroundColor =  UIColor(r: 230, g: 236, b: 241)
     static let sepratorColor = UIColor(r: 230, g: 230, b: 230)
     

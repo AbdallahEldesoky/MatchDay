@@ -16,7 +16,7 @@ class StandingDatasource: Datasource, JSONDecodable {
     var standigns: [Standing?]
     
     required init(json: JSON) throws {
-    
+        
         var tabel: [Standing?]
         guard let standingArr = json["standings"][0]["table"].array else {
             throw NSError(domain: URls.mainURL, code: 1, userInfo: [NSLocalizedDescriptionKey:
@@ -31,14 +31,14 @@ class StandingDatasource: Datasource, JSONDecodable {
             return nil
         })
         
-            /*var standigs = [Standing]()
-            for standJson in standingArr {
-                if let standDict = standJson.dictionary, let stand = Standing.init(dict: standDict) {
-                    standigs.append(stand)
-                }*/
+        /*var standigs = [Standing]()
+         for standJson in standingArr {
+         if let standDict = standJson.dictionary, let stand = Standing.init(dict: standDict) {
+         standigs.append(stand)
+         }*/
         
-            //do something to tabel or standing
-           // tabel = try tabels["tabel"]?.decode()
+        //do something to tabel or standing
+        // tabel = try tabels["tabel"]?.decode()
         
         
         
@@ -46,9 +46,9 @@ class StandingDatasource: Datasource, JSONDecodable {
         //do something to tabel or standing
         
         //self.standigns = try tabel.decode()
-     }
+    }
     
-   
+    
     override func numberOfItems(_ section: Int) -> Int {
         
         return standigns.count
@@ -56,7 +56,7 @@ class StandingDatasource: Datasource, JSONDecodable {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
- 
+        
         return standigns[indexPath.item]
     }
     

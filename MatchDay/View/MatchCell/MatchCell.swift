@@ -34,23 +34,23 @@ class MatchCell: DatasourceCell {
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = Default.sepratorColor
         
-
-        leftSpace.backgroundColor = .red
-        rightSpace.backgroundColor = .yellow
+        //
+        //        leftSpace.backgroundColor = .red
+        //        rightSpace.backgroundColor = .yellow
         
         addSubviews()
     }
     
     private func addSubviews() {
-    
-    addSubview(leftSpace)
-    addSubview(homeTeamName)
-    addSubview(homeTeamScore)
-    addSubview(dashLabel)
-    addSubview(awayTeamScore)
-    addSubview(awayTeamName)
-    addSubview(rightSpace)
-    
+        
+        addSubview(leftSpace)
+        addSubview(homeTeamName)
+        addSubview(homeTeamScore)
+        addSubview(dashLabel)
+        addSubview(awayTeamScore)
+        addSubview(awayTeamName)
+        addSubview(rightSpace)
+        
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -86,7 +86,7 @@ class MatchCell: DatasourceCell {
             
             dashLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
             dashLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.05),
-           // dashLabel.leftAnchor.constraint(equalTo: homeTeamScore.safeRightAnchor),
+            // dashLabel.leftAnchor.constraint(equalTo: homeTeamScore.safeRightAnchor),
             dashLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             dashLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             
@@ -107,22 +107,22 @@ class MatchCell: DatasourceCell {
             
             
             ])
-//        
-//        let spacingFromEdges = ( bounds.width - 24) / 9.5
-//        let teamNameWidth = spacingFromEdges * 3
-//        let scoreAndDashWidth = spacingFromEdges / 2
-//        
-//        
-//        homeTeamName.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: spacingFromEdges, bottomConstant: 4, rightConstant: 0, widthConstant: teamNameWidth, heightConstant: 20)
-//        
-//        homeTeamScore.anchor(topAnchor, left: homeTeamName.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: 0, widthConstant: scoreAndDashWidth, heightConstant: 20)
-//        
-//        dashLabel.anchor(topAnchor, left: homeTeamScore.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: 0, widthConstant: scoreAndDashWidth, heightConstant: 20)
-//        
-//        awayTeamScore.anchor(topAnchor, left: dashLabel.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: 0, widthConstant: scoreAndDashWidth, heightConstant: 20)
-//        
-//        awayTeamName.anchor(topAnchor, left: awayTeamScore.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: spacingFromEdges, widthConstant: teamNameWidth, heightConstant: 0)
-//        
+        //
+        //        let spacingFromEdges = ( bounds.width - 24) / 9.5
+        //        let teamNameWidth = spacingFromEdges * 3
+        //        let scoreAndDashWidth = spacingFromEdges / 2
+        //
+        //
+        //        homeTeamName.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: spacingFromEdges, bottomConstant: 4, rightConstant: 0, widthConstant: teamNameWidth, heightConstant: 20)
+        //
+        //        homeTeamScore.anchor(topAnchor, left: homeTeamName.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: 0, widthConstant: scoreAndDashWidth, heightConstant: 20)
+        //
+        //        dashLabel.anchor(topAnchor, left: homeTeamScore.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: 0, widthConstant: scoreAndDashWidth, heightConstant: 20)
+        //
+        //        awayTeamScore.anchor(topAnchor, left: dashLabel.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: 0, widthConstant: scoreAndDashWidth, heightConstant: 20)
+        //
+        //        awayTeamName.anchor(topAnchor, left: awayTeamScore.rightAnchor, bottom: bottomAnchor, right: nil, topConstant: 4, leftConstant: 8, bottomConstant: 4, rightConstant: spacingFromEdges, widthConstant: teamNameWidth, heightConstant: 0)
+        //
         
     }
     
@@ -137,8 +137,8 @@ class MatchCell: DatasourceCell {
         
         homeTeamName.text = match.homeTeam.name
         awayTeamName.text = match.awayTeam.name
-    
-
+        
+        
     }
     
     

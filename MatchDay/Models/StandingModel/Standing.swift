@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 struct Standing: DictDecodable {
-   
+    
     var team: Team
     var position: Int
     var playedGame: Int
@@ -23,10 +23,10 @@ struct Standing: DictDecodable {
     var goalDiffrence: Int
     
     init?(dict: [String: JSON]) {
-
+        
         
         guard let teamDict = dict["team"]?.dictionary,let team = Team.init(dict: teamDict), let position = dict["position"]?.toInt, let playedGame = dict["playedGames"]?.toInt, let won = dict["won"]?.toInt, let draw = dict["draw"]?.toInt, let lost = dict["lost"]?.toInt, let points = dict["points"]?.toInt, let goalsFor = dict["goalsFor"]?.toInt, let goalsAgainst = dict["goalsAgainst"]?.toInt, let goalDiffrence = dict["goalDifference"]?.toInt else { return nil }
-
+        
         self.team = team
         self.position = position
         self.playedGame = playedGame
